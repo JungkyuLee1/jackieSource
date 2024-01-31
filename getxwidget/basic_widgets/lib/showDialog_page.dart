@@ -1,0 +1,172 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class ShowDialogPage extends StatelessWidget {
+  const ShowDialogPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Gex ShowDialog'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Get.defaultDialog();
+            Get.dialog(DialogMessage(
+                '제목', '메세지', okCallback: () {
+                  print('OK clicked');
+            }, cancelCallback: () {
+              Get.back();
+            }));
+          },
+          child: Text('Show Dialog'),
+        ),
+      ),
+    );
+  }
+}
+
+class DialogMessage extends StatelessWidget {
+  const DialogMessage(this.title, this.message,
+      {this.okCallback, this.cancelCallback, Key? key}) : super(key: key);
+
+  final String? title;
+  final String? message;
+  final Function()? okCallback;
+  final Function()? cancelCallback;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      // type: MaterialType.transparency,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: Get.size.width * 0.7,
+            padding: EdgeInsets.symmetric(vertical: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                Text(
+                  title!,
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+                SizedBox(height: 10,),
+                Text(
+                  message!,
+                  style: TextStyle(fontSize: 14, color: Colors.black),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: okCallback,
+                      child: Text('OK'),
+                      style: ElevatedButton.styleFrom(primary: Colors.orange),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    ElevatedButton(
+                      onPressed: cancelCallback,
+                      child: Text('Cancel'),
+                      style: ElevatedButton.styleFrom(primary: Colors.grey),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+//
+// class MessagePopup extends StatelessWidget {
+//   const MessagePopup(this.title, this.message,
+//       {this.okCallback, this.cancelCallback, Key? key})
+//       : super(key: key);
+//
+//   final String? title;
+//   final String? message;
+//   final Function()? okCallback;
+//   final Function()? cancelCallback;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Material(
+//       color: Colors.transparent,
+//       // type: MaterialType.transparency,
+//       child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Container(
+//             width: Get.size.width*0.7,
+//             padding: EdgeInsets.symmetric(vertical: 10),
+//             decoration: BoxDecoration(
+//               borderRadius: BorderRadius.circular(5),
+//               color: Colors.white,
+//             ),
+//             child: Column(
+//               children: [
+//                 Text(
+//                   title!,
+//                   style: TextStyle(
+//                       fontSize: 17,
+//                       fontWeight: FontWeight.bold,
+//                       color: Colors.black),
+//                 ),
+//                 SizedBox(height: 10,),
+//                 Text(
+//                   message!,
+//                   style: TextStyle(fontSize: 14, color: Colors.black),
+//                 ),
+//                 SizedBox(
+//                   height: 20,
+//                 ),
+//                 Row(
+//                   mainAxisAlignment: MainAxisAlignment.center,
+//                   children: [
+//                     ElevatedButton(
+//                       onPressed: okCallback,
+//                       child: Text('OK'),
+//                       style: ElevatedButton.styleFrom(primary: Colors.orange),
+//                     ),
+//                     SizedBox(
+//                       width: 10,
+//                     ),
+//                     ElevatedButton(
+//                       onPressed: cancelCallback,
+//                       child: Text('Cancel'),
+//                       style: ElevatedButton.styleFrom(primary: Colors.grey),
+//                     )
+//                   ],
+//                 )
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+

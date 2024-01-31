@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111451414956",
+    "project_id": "signindemo-73ba4",
+    "storage_bucket": "signindemo-73ba4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111451414956:android:d8814f090f417b91829a09",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0opv-vWjmB1Alvjab-cdNv7MzWRwwSR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1070987104627",
+    "project_id": "jackiesellonhr",
+    "storage_bucket": "jackiesellonhr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070987104627:android:1e26eb13d9646b1f5bf506",
+        "android_client_info": {
+          "package_name": "com.example.jackie_hr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070987104627-smgi65v3e7tarckamiott7ik0vd1s6v2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp03EZ2Gr8-YIqbr3DEvYoWjJ2CfmK1D0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070987104627-smgi65v3e7tarckamiott7ik0vd1s6v2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1070987104627-poobfcn0j1el6jqsffcv1dl9c4u7m83k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.jackieHr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
